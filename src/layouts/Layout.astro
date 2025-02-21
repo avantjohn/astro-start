@@ -1,0 +1,44 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<script>
+	import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    gsap.registerPlugin(ScrollTrigger);
+
+	const fade = document.querySelectorAll('.fade');
+
+	gsap.fromTo(
+		fade,
+		{ opacity: 0 },
+		{
+			opacity: 1,
+			duration: 1
+		}
+	);
+</script>
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="fade">
+		<Header />
+		<main>
+			<slot />
+		</main>
+		<Footer />
+        <script src="../scripts/app.ts"></script>
+	</body>
+</html>
+
+<style>
+    .fade {
+        opacity: 0;
+    }
+</style>

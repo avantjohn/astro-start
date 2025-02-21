@@ -1,18 +1,18 @@
-# Astro Starter Kit: Blog
 
-```sh
-npm create astro@latest -- --template blog
-```
+install astro
+install astro icon
+    add icon folder to src
+install gsap
+    import gsap to page or component
+install locomotive-scroll
+    install nanostores
+    add script folder to src with scroll functions
+Add style folder to src
+install font from fontsource
+    update font in style
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
-
-Features:
 
 - ✅ Minimal styling (make it your own!)
 - ✅ 100/100 Lighthouse performance

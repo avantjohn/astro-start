@@ -9,4 +9,7 @@ import icon from 'astro-icon';
 export default defineConfig({
     site: 'https://example.com',
     integrations: [mdx(), sitemap(), icon()],
+    devToolbar: {
+        enabled: false
+    }
 });
