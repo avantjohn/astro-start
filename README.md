@@ -9,6 +9,7 @@ install locomotive-scroll
     add script folder to src with scroll functions
 Add style folder to src
 install font from fontsource
+    npm install @fontsource-variable/inter
     update font in style
 
 

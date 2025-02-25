@@ -3,6 +3,13 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+import '../styles/global/css-reset.css';
+import '../styles/theme/colors-core.css';
+import '../styles/theme/colors-theme.css';
+import '../styles/theme/fonts-theme.css';
+import '../styles/theme/spacing-theme.css';
+import '../styles/theme/borders-theme.css';
 ---
 
 <script>
@@ -28,7 +35,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body class="fade">
-		<Header />
+		<Header />	
 		<main>
 			<slot />
 		</main>
@@ -41,4 +48,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     .fade {
         opacity: 0;
     }
+
+	body {
+		background: var(--u-color-bg-primary);
+		color: var(--u-color-text-primary);
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	main {
+		position: relative;
+		width: 100%;
+		max-width: 1920px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 </style>

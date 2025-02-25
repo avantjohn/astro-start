@@ -2,9 +2,9 @@
 import HeaderLink from './HeaderLink.astro';
 
 const navLinks = [
-	{ href: '/', text: 'Home' },
-	{ href: '/blog', text: 'Blog' },
-	{ href: '/about', text: 'About' }
+	{ href: '/', text: 'home' },
+	{ href: '/about', text: 'about' },
+	{ href: '/blog', text: 'blog' }
 ];
 ---
 
@@ -46,7 +46,7 @@ const navLinks = [
 <style>
 	/* Header Layout */
 	.nav-wrapper {
-		position: sticky;
+		position: fixed;
 		top: 0;
 		width: 100%;
 		z-index: 1000;
@@ -57,9 +57,8 @@ const navLinks = [
 		position: relative;
 		width: 100%;
 		padding: 1rem 1rem;
-		background: black;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
-		z-index: 3;
+		background: transparent;
+		z-index: 1001;
 	}
 
 	nav {
@@ -78,6 +77,7 @@ const navLinks = [
 		gap: 1rem;
 		position: relative;
 		z-index: 3;
+		opacity: 0.8;
 	}
 
 	.logo {
@@ -91,7 +91,7 @@ const navLinks = [
 	}
 
 	.logo-paths {
-		fill: white;
+		fill: var(--u-color-text-primary);
 	}
 
 	/* Hamburger Menu */
@@ -105,8 +105,8 @@ const navLinks = [
 
 	.bar1, .bar2 {
 		width: 25px;
-		height: 2px;
-		background-color: white;
+		height: 1px;
+		background-color: var(--u-color-text-primary);
 		margin: 6px 0;
 		border-radius: 10px;
 		transition: 0.4s;
@@ -115,11 +115,11 @@ const navLinks = [
 
 	/* Menu Open States */
 	.menu-open .bar1 {
-		transform: translateY(200%);
+		transform: translateY(350%);
 	}
 
 	.menu-open .bar2 {
-		transform: translateY(-200%);
+		transform: translateY(-350%);
 	}
 
 	/* Fullscreen Navigation */
@@ -129,11 +129,11 @@ const navLinks = [
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgb(0, 0, 0);
+		background-color: var(--u-color-bg-primary);
 		display: none;
 		justify-content: center;
 		align-items: center;
-		z-index: 2;
+		z-index: 999;
 	}
 
 	.menu-open .fullscreen-nav {
@@ -147,7 +147,7 @@ const navLinks = [
 
 	.nav-links a {
 		display: block;
-		color: white;
+		color: var(--u-color-text-primary);
 		font-size: 2rem;
 		margin: 20px;
 		text-decoration: none;
